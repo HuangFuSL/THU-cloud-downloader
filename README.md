@@ -1,3 +1,3 @@
-# Electron React Application
+# THU Cloud Downloader
 
-Application template for Electron and React.js application, created using `npx create-react-app . --template typescript` according to tutorial [React + Electron + Typescript — a dev experience (part 1)](https://medium.com/@SzybkiSasza/react-electron-typescript-a-dev-experience-part-1-f507e98dd4d9) and [React + Electron + Typescript — A Dev Experience (part 2)](https://medium.com/swlh/react-electron-typescript-a-dev-experience-part-2-1dbbce43fcee) by [@SzybkiSasza](https://github.com/SzybkiSasza)
+清华网盘下载器，可以自动下载分享链接中的文件，避免浏览器不能打包大文件的问题。

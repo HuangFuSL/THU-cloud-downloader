@@ -1,5 +1,5 @@
 {
-    "name": "electron-react-template",
+    "name": "thu-cloud-downloader",
     "version": "1.0.0",
     "private": true,
     "dependencies": {
@@ -7,13 +7,10 @@
         "@testing-library/react": "^12.1.2",
         "@testing-library/user-event": "^13.5.0",
         "@types/jest": "^27.4.0",
-        "@types/node": "^16.11.19",
         "@types/react": "^17.0.38",
         "@types/react-dom": "^17.0.11",
         "@typescript-eslint/eslint-plugin": "^5.9.0",
         "@typescript-eslint/parser": "^5.9.0",
-        "electron": "^16.0.6",
-        "electron-builder": "^22.14.5",
         "eslint-plugin-react": "^7.28.0",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
@@ -32,7 +29,8 @@
         "launch": "npm run build && electron .",
         "test": "react-scripts test",
         "lint": "eslint ./src --ext \".js,.jsx,.ts,.tsx\" && stylelint \"./src/**/*.css\"",
-        "lint:fix": "eslint ./src --ext \".js,.jsx,.ts,.tsx\" --fix && stylelint \"./src/**/*.css\" --fix"
+        "lint:fix": "eslint ./src --ext \".js,.jsx,.ts,.tsx\" --fix && stylelint \"./src/**/*.css\" --fix",
+        "dist": "electron-builder"
     },
     "eslintConfig": {
         "extends": [
@@ -53,5 +51,38 @@
         ]
     },
     "main": "build/electron/main.js",
-    "homepage": "."
+    "homepage": ".",
+    "devDependencies": {
+        "@types/node": "^16.11.21",
+        "electron": "^16.0.0",
+        "electron-builder": "^22.14.5",
+        "electron-packager": "^15.4.0"
+    },
+    "build": {
+        "productName": "thu-cloud-downloader",
+        "appId": "com.huangfusl.thu-cloud-downloader",
+        "copyright": "HuangFuSL",
+        "directories": {
+            "output": "release",
+            "buildResources": "build"
+        },
+        "files": [
+            "build/**/*"
+        ],
+        "win": {
+            "target": [
+                {
+                    "target": "nsis"
+                }
+            ]
+        },
+        "mac": {
+            "target": [
+                {
+                    "target": "dmg"
+                }
+            ]
+        },
+        "extends": null
+    }
 }
